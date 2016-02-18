@@ -10,6 +10,13 @@ import time
 def textout(scan=-1, header=[], userheader={}, column=[], output = True):
     '''
     scan: can be scan_id (integer) or uid (string). defaul = -1 (last scan run)
+          default = -1
+    header: a list of items that exist in the event data to be put into the header
+    userheader: a dictionary defined by user to put into the hdeader
+    column: a list of items that exist in the event data to be put into the column data
+    output: print all header fileds. if output = False, only print the ones that were able to be written
+            default = True
+    
     '''   
     scanh= db[scan]
     print(scanh.start)
